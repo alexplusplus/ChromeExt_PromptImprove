@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Prompt Improver</title>
+    <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="p-4 font-sans">
+    <h1 class="text-xl font-bold mb-4">Gemini Prompt Improver</h1>
+    <button 
+        id="improvePrompt" 
+        class="w-full py-2 px-1 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 disabled:opacity-50"
+    >
+        Improve Prompt
+    </button>
+    <div id="improvements" class="mt-1 whitespace-pre-wrap"></div>
+    <div id="loading" class="hidden mt-1 text-center text-gray-600">Generating improvements...</div>
+    <script src="sidepanel.js"></script>
+</body>
+</html>

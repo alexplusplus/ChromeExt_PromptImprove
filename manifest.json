@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Prompt Improver",
+  "version": "1.0",
+  "description": "Improves prompts for Gemini AI",
+  "permissions": ["activeTab", "scripting", "sidePanel", "tabs"],
+  "host_permissions": ["https://gemini.google.com/app/*"],
+  "action": {
+    "default_title": "Gemini Prompt Improver",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/app/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
